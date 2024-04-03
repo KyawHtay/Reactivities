@@ -15,12 +15,12 @@ export default observer(function ActivityList(){
 
     }
    const {activityStore} =useStore();
-   const {activities,selectActivity,deleteActivity,loading} =activityStore
+   const {activitiesByDate,selectActivity,deleteActivity,loading} =activityStore
    
     return(
         <Segment>
             <Item.Group divided>
-                {activities.map(activity=>(
+                {activitiesByDate.map(activity=>(
 
                     <Item key={activity.id}>
                         <Item.Content>
