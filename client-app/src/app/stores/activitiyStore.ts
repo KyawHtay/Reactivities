@@ -96,7 +96,8 @@ export default class ActivityStore{
     try{
         await agent.Activities.delete(id);
         runInAction(()=>{
-            this.activities=[...this.activities.filter(x=>x.id !==id)]
+            this.activities=[...this.activities.filter(x=>x.id !==id)];
+            if (this.selectedActivity?.id===id) this.cancelSelectedActivity;
             this.selectedActivity = undefined;
             this.editMode = false;
             this.loading =false;

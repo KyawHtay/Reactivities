@@ -1,5 +1,4 @@
 import { Button, Item, Label, Segment } from "semantic-ui-react";
-import { Activity } from "../../../models/activity";
 import { SyntheticEvent, useState } from "react";
 import { useStore } from "../../../stores/store";
 import { observer } from "mobx-react-lite";
