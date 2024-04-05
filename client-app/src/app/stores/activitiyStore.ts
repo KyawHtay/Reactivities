@@ -61,7 +61,7 @@ export default class ActivityStore{
         try{
             await agent.Activities.create(activity);
             runInAction(()=>{
-                this.activityRegistry.set(activity.id,activity);
+                this.activityRegistry.set(activity.id,activity); //replace the value if the key is same (if not added)
                 this.selectedActivity = activity;
                 this.editMode = false;
                 this.loading =false;
